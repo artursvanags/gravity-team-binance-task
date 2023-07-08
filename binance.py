@@ -15,7 +15,7 @@ candle_interval = "1m"  # 1 minute
 # Start and end time
 start_time = datetime.datetime(2023, 1, 1, tzinfo=pytz.UTC)
 end_time = datetime.datetime(2023, 1, 2, tzinfo=pytz.UTC)
-print(start_time, end_time)
+
 # Convert start and end time to milliseconds
 start_time = int(time.mktime(start_time.timetuple()))*1000
 end_time = int(time.mktime(end_time.timetuple()))*1000
