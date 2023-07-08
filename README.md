@@ -19,6 +19,7 @@ When executed, the provided Python script:
 2. Calls Binance's API endpoint `/api/v3/klines` and retrieves the OHLCV trading data at 1 minute resolution.
 
 3. Retrives and processes the API response:
+    - Makes a loop of API untill all candles from endpoint have been recieved ( to avoid API 1000 response limit )
     - Decodes the JSON response and converts it into a pandas DataFrame.
     - Assign column names to the DataFrame for better readability.
     - Convert `volume` and `close` columns to float type.
